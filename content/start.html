@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery of Crystal Lake</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="intro">
+        <h1>Mystery of Crystal Lake</h1>
+        <p>Crystal Lake, a haven for families and nature lovers, faces a terrible crisis. The once vibrant lake, known for its crystal-clear water and abundant fish, has been declared unsafe due to mysterious contamination. The townspeople are in shock and desperate for answers. You, a young detective with a keen eye for detail, have been called upon to uncover the truth. Are you ready to begin your investigation?</p>
+        <button onclick="startGame()">Let's Investigate!</button>
+    </div>
+
+    <div id="investigation_choice" style="display: none;">
+        <h2>Who will you talk to first?</h2>
+        <button onclick="showCharacter('sheriff')">Sheriff Jones (Head of Law Enforcement)</button>
+        <button onclick="showCharacter('doctor')">Dr. Evans (Local Physician)</button>
+        <button onclick="showCharacter('store_owner')">Mr. Miller (Crystal Lake General Store Owner)</button>
+    </div>
+
+    <div id="sheriff" style="display: none;">
+        <h2>Sheriff Jones</h2>
+        <p>"The contamination seems deliberate," Sheriff Jones says with a grim expression. "Someone must have dumped something nasty in the lake. I've questioned a few folks, but no leads yet. Maybe you can find something I missed."</p>
+        <button onclick="showSource('newspaper')">Read the Town Newspaper Report</button>
+    </div>
+
+    <div id="doctor" style="display: none;">
+        <h2>Dr. Evans</h2>
+        <p>"The tests show high levels of industrial pollutants. It's definitely not natural. Long-term exposure could be harmful," Dr. Evans explains with concern. "Have you talked to the folks at the Pure Water Processing Plant? They might know something."</p>
+        <button onclick="showSource('factory_website')">Visit Pure Water Processing Plant Website</button>
+    </div>
+
+    <div id="store_owner" style="display: none;">
+        <h2>Mr. Miller</h2>
+        <p>"This whole mess is a disaster for business!" Mr. Miller exclaims. "Fishin' licenses, bait sales, everything's down the drain. I heard some rumors about the factory dumping waste at night, but who knows what's true these days..."</p>
+        <button onclick="showSource('social_media')">Check Crystal Lake Social Media Chatter</button>
+    </div>
+
+    <div id="newspaper" style="display: none;">
+        <h2>Crystal Lake Gazette: Lake Contamination Baffles Experts</h2>
+        <p>The article details the lake closure and ongoing investigation. It mentions elevated levels of unknown chemicals and interviews concerned residents.</p>
+        <button onclick="investigateFurther()">Continue Investigation</button> </div>
+
+    <div id="factory_website" style="display: none;">
+        <h2>Pure Water Processing Plant: Committed to Clean Water</h2>
+        <p>The company website claims they prioritize environmental safety and are cooperating with the investigation. It denies any responsibility for the contamination.</p>
+        <button onclick="investigateFurther()">Continue Investigation</button> </div>
+
+    <div id="social_media" style="display: none;">
+        <h2>Crystal Lake Chatter (Social Media Feed)</h2>
+        <p>A mix of posts appears: some express frustration, others share conspiracy theories, and a few offer unverified "evidence."  One post mentions a strange light seen near the factory on the night of the contamination.</p>
+        <button onclick="showPlotTwist()">Investigate the Strange Light</button> </div>
+
+    <div id="plot_twist" style="display: none;">
+        <h2>A Strange Discovery</h2>
+        <p>Following up on the social media lead,         <p>Following up on the social media lead, you head towards the abandoned lookout tower overlooking the factory. As you climb the rickety stairs, a crow caws and flutters away. Reaching the top, you scan the factory grounds with your binoculars.  Suddenly, a glint of metal catches your eye.  Half-hidden in the bushes behind the factory building, there's a large, unmarked pipe leading directly into the lake!</p>
+        <button onclick="confrontSuspect('factory')">Confront the Factory Manager</button>
+        <button onclick="investigateFurther()">Look for Other Evidence (WIP)</button>
+    </div>
+
+    <div id="confront_factory" style="display: none;">
+        <h2>Confrontation at the Factory</h2>
+        <p>You storm into the factory manager's office, brandishing a photo of the hidden pipe. The manager, a portly man with a bead of sweat forming on his forehead, stammers and denies any wrongdoing. Do you believe him?</p>
+        <button onclick="accuse('factory')">Accuse the Factory of Dumping Waste (Coming Soon!)</button>
+        <button onclick="investigateFurther()">Something Doesn't Feel Right (WIP)</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
